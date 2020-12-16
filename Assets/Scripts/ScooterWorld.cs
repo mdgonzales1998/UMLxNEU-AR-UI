@@ -13,7 +13,7 @@ public class ScooterWorld : MonoBehaviour
     private String _state;
     private String _pickCloudState = "Pick Cloud";
     private String _placeCloudState = "Place Cloud";
-    private Ros_CSharp.NodeHandle _nh;
+    private NodeHandle _nh;
     private Subscriber<Messages.sensor_msgs.PointCloud2> _pcSub;
     private Subscriber<Messages.std_msgs.String> _stateSub;
     private Publisher<Messages.std_msgs.String> _pub;
