@@ -1,6 +1,6 @@
-﻿#if UNITY
+﻿//#if UNITY
 #define FOR_UNITY
-#endif
+//#endif
 #if ENABLE_MONO
 #define FOR_UNITY
 #endif

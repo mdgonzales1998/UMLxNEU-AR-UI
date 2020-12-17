@@ -104,6 +104,7 @@ public class ScooterWorld : MonoBehaviour
     private void pc_callback(Messages.sensor_msgs.PointCloud2 pc)
     {
         _world = pc;
+        Debug.Log("found pc");
     }
 
     private void state_callback(Messages.std_msgs.String s)
