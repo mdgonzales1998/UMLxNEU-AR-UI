@@ -12,12 +12,14 @@ public class ROSCore : MonoBehaviour {
     public bool autostart;
     public string Master_URI;
     public string HOSTNAME;
+    //[SerializeField] ScooterWorld scooter;
     //public string 
 
     public NodeHandle getNodeHandle()
     {
         if (IsROSStarted)
         {
+            Debug.Log("ROS STARTED");
             return nh;
         }
         else
@@ -33,13 +35,17 @@ public class ROSCore : MonoBehaviour {
         {
             ROS.ROS_HOSTNAME = hostname;
             ROS.ROS_MASTER_URI = master_uri;
+            //scooter.getStateText().text = "calling ros init";
             ROS.Init(new String[0], nodename);
+            //scooter.getStateText().text = "ros init called, creating nodehandle";
             nh = new NodeHandle();
             IsROSStarted = true;
             Debug.Log("ROS Started, Master: " + master_uri + " Hostname: " + hostname + " Node Name: " + nodename);
+            //scooter.getPromptText().text = "ROS Started, Master: " + master_uri + " Hostname: " + hostname + " Node Name: " + nodename;
         }
         else
         {
+            //scooter.getStateText().text = "ROS already started";
             Debug.LogWarning("Can't start ROS, it is already started");
         }
     }

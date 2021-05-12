@@ -10,9 +10,9 @@
 // Created: 04/28/2015
 // Updated: 02/10/2016
 
-#if UNITY
+//#if UNITY
 #define FOR_UNITY
-#endif
+//#endif
 #if ENABLE_MONO
 #define FOR_UNITY
 #endif
